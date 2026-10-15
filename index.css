@@ -78,17 +78,29 @@ footer {
     padding: 20px;
     background-color: #f4f4f4;
 }
-@media (max-width:600px) {
-    .navbar {
-        padding: 15px 20px;
+/* Fix default link styles for the whole website */
+nav a, .nav-links a {
+    text-decoration: none;  /* Removes the ugly underline */
+    color: #333;            /* Changes link color from blue to a clean dark gray */
+    font-weight: 500;
+}
+
+/* 📱 Mobile Specific Styles (For screens under 600px wide) */
+@media (max-width: 600px) {
+    /* Assuming your header holds your logo and navigation links */
+    header, nav {
+        display: flex;
+        flex-direction: column; /* Stack the logo on top, and links below */
+        align-items: center;    /* Center everything horizontally */
+        text-align: center;
+        gap: 10px;              /* Put a clean space between them */
     }
-    nav a {
-        margin: 0 12px 0 0;
-    }
-    section {
-        padding: 40px 20px;
-    }
-    h1 {
-        font-size: 1.8rem;
+
+    /* Wrap your links together so they wrap nicely */
+    .nav-links, nav div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;              /* Space out the individual links */
     }
 }
