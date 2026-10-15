@@ -90,7 +90,7 @@ nav a, .nav-links a {
     /* Assuming your header holds your logo and navigation links */
     header, nav {
         display: flex;
-        flex-direction: column; /* Stack the logo on top, and links below */
+        flex-direction: row; /* Stack the logo on top, and links below */
         align-items: center;    /* Center everything horizontally */
         text-align: center;
         gap: 10px;              /* Put a clean space between them */
